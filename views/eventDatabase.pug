@@ -1,0 +1,115 @@
+extends layout
+
+block content
+
+  // ================ Start banner Area =================
+  section.banner-area.relative
+    .container
+      .row.height.align-items-center.justify-content-center
+        .banner-content.col-lg-6
+          h1 Event Database
+          hr
+          .breadcrmb
+            p
+              a(href='index.html') Databases
+              span.lnr.lnr-arrow-right
+              a(href='about.html') From  ../models
+              a(href="/contactDatabase")
+                li Contact
+              a(href="/eventDatabase")
+                li Event
+              a(href="/userDatabase")
+                li User
+
+  // ============ content =====================
+  section.gallery-area.section-gap.mt-172
+    .container
+      .row.align-items-center
+        .col-lg-6.col-md-5.col-sm-6
+          .single-gallery.mt--350
+            table.table.table-bordered.table-hover.table-striped
+              thead
+                tr
+                  th Check In Date
+                  th Check Out Date
+                  th Adults
+                  th Children
+                  th Action
+              tbody
+                each event in events
+                  tr
+                    td= event.eventDateIn
+                    td= event.eventDateOut
+                    td= event.adults
+                    td= event.children
+                    td
+                      form(action= `/event/delete/${event.id}`, method='POST', onsubmit="return('Are you sure you want to delete this');")
+                        .form-group
+                          button.btn.btn-sm.btn-danger(type='submit')
+                            i.fas.fa-trash-alt.fa-sm
+                            | Delete
+                      form(action= `/event/edit/${event.id}`, method='POST', onsubmit="return('We will edit this entry');")
+                        .form-group
+                          button.btn.btn-sm.btn-primary(type='submit')
+                            i.fas.fa-pencil-square-o.fa-sm
+                            | Edit
+                      form(action= `/event/get-report/${event.id}`, method='POST', onsubmit="return('Now we updated and saved the information');")
+                        .form-group
+                          input(type='hidden', name='_csrf', value=_csrf)
+                          button.btn.btn-sm.btn-info(type='submit')
+                            i.fas.fa-file-download.fa-sm
+                            | Save
+                      form(action= `/event/send-email/${event.id}`, method='POST', onsubmit="return('Now we updated and saved the information');")
+                        .form-group
+                          input(type='hidden', name='_csrf', value=_csrf)
+                          button.btn.btn-sm.btn-success(type='submit')
+                            i.fas.fa-paper-plane.fa-sm
+                            | Email
+                tr
+                  th
+                  th
+                  th
+                      form(action= `/event/delete-page/${currentPage}`, method='POST', onsubmit="return('Now we updated and saved the information');")
+                          .form-group
+                              input(type='hidden', name='_csrf', value=_csrf)
+                              button.btn.btn-sm.btn-danger(type='submit')
+                                  i.fas.fa-trash-alt.fa-sm
+                                  | Delete page
+                  th
+                      form(action= `/event/save-page/${currentPage}`, method='POST', onsubmit="return('Now we updated and saved the information');")
+                          .form-group
+                              input(type='hidden', name='_csrf', value=_csrf)
+                              button.btn.btn-sm.btn-info(type='submit')
+                                  i.fas.fa-file-download.fa-sm
+                                  | Save page
+                  th
+                      form(action= `/event/send-email-page/${currentPage}`, method='POST', onsubmit="return('Now we updated and saved the information');")
+                          .form-group
+                              input(type='hidden', name='_csrf', value=_csrf)
+                              button.btn.btn-sm.btn-success(type='submit')
+                                  i.fas.fa-paper-plane.fa-sm
+                                  | Email page
+          nav.blog-pagination.justify-content-center.d-flex
+            ul.pagination
+              if hasPreviousPage
+                  li.page-item
+                    a.page-link(href=`/eventDatabase/?page=${ previousPage}` aria-label='Previous')
+                      span(aria-hidden='true')
+                        span.lnr.lnr-chevron-left
+              if currentPage!==1 && previousPage !==1
+                  li.page-item
+                    a.page-link(href=`/eventDatabase/?page=1`) 1
+              if hasPreviousPage
+                  li.page-item
+                    a.page-link(href=`/eventDatabase/?page=${ previousPage}`)= previousPage
+              li.page-item.active
+                a.page-link(href=`/eventDatabase/?page=${ currentPage}`)= currentPage
+              if hasNextPage
+                  li.page-item
+                    a.page-link(href=`/eventDatabase/?page=${ nextPage}`)= nextPage
+              if hasNextPage
+                  li.page-item
+                    a.page-link(href=`/eventDatabase/?page=${ nextPage}` aria-label='Next')
+                      span(aria-hidden='true')
+                        span.lnr.lnr-chevron-right
+

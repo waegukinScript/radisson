@@ -1,0 +1,525 @@
+doctype html
+html(lang='en')
+  head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='icon', href='img/favicon.png', type='image/png')
+    title Radisson Hotel
+    // Bootstrap CSS
+    link(rel='stylesheet', href='css/bootstrap.css')
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    link(rel='stylesheet', href='vendors/linericon/style.css')
+    link(rel='stylesheet', href='css/font-awesome.min.css')
+    link(rel='stylesheet', href='vendors/owl-carousel/owl.carousel.min.css')
+    link(rel='stylesheet', href='vendors/lightbox/simpleLightbox.css')
+    link(rel='stylesheet', href='vendors/nice-select/css/nice-select.css')
+    link(rel='stylesheet', href='vendors/animate-css/animate.css')
+    link(rel='stylesheet', href='vendors/popup/magnific-popup.css')
+    // main css
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='css/responsive.css')
+  body
+    // ================Header Menu Area =================
+    header.header_area
+      .top_menu.row.m0
+        .container
+          .float-left
+            ul.list.header_social
+              li
+                a(href='#') Contact Us +44 (012) 5689 3264
+          .float-right
+            select
+              option(value='1') USD
+              option(value='1') EUR
+              option(value='1') AOA
+              option(value='1') AUD
+            select
+              option(value='1') ENG
+              option(value='1') FRA
+              option(value='1') BAN
+      .main_menu
+        nav.navbar.navbar-expand-lg.navbar-light
+          .container
+            // Brand and toggle get grouped for better mobile display
+            a.navbar-brand.logo_h(href='index.html')
+              img(src='img/logo.png', alt='')
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            // Collect the nav links, forms, and other content for toggling
+            #navbarSupportedContent.collapse.navbar-collapse.offset
+              ul.nav.navbar-nav.menu_nav.ml-auto
+                li.nav-item.active
+                  a.nav-link(href='index.html') Home
+                li.nav-item
+                  a.nav-link(href='about-us.html') About
+                li.nav-item
+                  a.nav-link(href='gallery.html') Gallery
+                li.nav-item.submenu.dropdown
+                  a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Pages
+                  ul.dropdown-menu
+                    li.nav-item
+                      a.nav-link(href='elements.html') Elements
+                    li.nav-item
+                      a.nav-link(href='rooms.html') Rooms
+                li.nav-item.submenu.dropdown
+                  a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Blog
+                  ul.dropdown-menu
+                    li.nav-item
+                      a.nav-link(href='blog.html') Blog
+                    li.nav-item
+                      a.nav-link(href='single-blog.html') Blog Details
+                li.nav-item
+                  a.nav-link(href='contact.html') Contact
+    // ================Header Menu Area =================
+    // ================Home Banner Area =================
+    section.home_banner_area
+      .banner_inner.d-flex.align-items-center
+        .overlay.bg-parallax(data-stellar-ratio='2', data-stellar-vertical-offset='0', data-background='')
+        // <div class="overlay overlay-bg"></div>
+        .container
+          .banner_content.text-center
+            p.top-text Welcome to
+            h1 Radisson
+            p.text
+              | If you are looking at blank cassettes on the web, you may be very confused at the difference in
+              | price. You may
+              | see some for as low as $.17 each.
+            a.play-btn(href='https://www.youtube.com/watch?v=ARA0AxrnHdM')
+              img.vdo-btn(src='img/video-icon.png', alt='')
+    // ================End Home Banner Area =================
+    // ================Booking Area =================
+    section.container
+      .booking_area
+        form(action='')
+          .row
+            .col-lg-3.col-sm-6.col-6
+              .booking_item
+                p Check - in
+                span.day 15
+                span.month th sep
+                label(for='CheckIn')
+                  i.fa.fa-angle-down
+                input#CheckIn.form-control(type='date', name='CheckIn', aria-describedby='emailHelp')
+            .col-lg-3.col-sm-6.col-6
+              .booking_item
+                p Check - out
+                span.day 25
+                span.month th sep
+                label(for='CheckOut')
+                  i.fa.fa-angle-down
+                input#CheckOut.form-control(type='date', name='CheckOut', aria-describedby='emailHelp')
+            .col-lg-3.col-sm-6.col-6
+              .booking_item
+                p Toatal guests
+                span.day 05
+                span.month person
+            .col-lg-3.col-sm-6.col-6.coupon-code
+              .booking_item
+                p.text-capitalize
+                  a(href='#') Got a Coupon Code?
+                button.main_btn.text-uppercase(type='submit') check availabity
+    // ================End Booking Area =================
+    // ================About Area =================
+    section.about_area.section_gap
+      .container
+        .row
+          .col-lg-12
+            .main_title
+              .top-part
+                p About Us Our History Mission & Vision
+              h2
+                | About Us Our History 
+                br
+                | 							Mission & Vision
+              .bottom_part
+                p
+                  | inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
+                  | especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond
+                  | reproach.
+                  | inappropriate behavior is often laughed.
+              a.main_btn.mt-45(href='#') Request Custom Price
+        .row.justify-content-center
+          .col-lg-10
+            #video.video_area
+              img.img-fluid(src='img/video-1.jpg', alt='')
+              .overlay.overlay-bg
+              a.popup-youtube(href='https://www.youtube.com/watch?v=VufDd-QL1c0')
+                img(src='img/video-icon-1.png', alt='')
+    // ================End About Area =================
+    // Start Our Room Area
+    section.our_room_area
+      .container-fluid
+        .row
+          .col-lg-12
+            .main_title
+              .top-part
+                p Our Rooms
+              h2 Our Rooms
+              .bottom_part
+                p
+                  | We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to day,
+                  | also asks us to remain physically young. Young at heart,
+        .row.align-items-center
+          .col-lg-6
+            .room_left
+              img.img-fluid(src='img/room/r1.jpg', alt='')
+          .col-lg-6
+            .owl-carousel.owl-room
+              .room_right
+                h1.price
+                  i.fa.fa-dollar
+                  | 250
+                  span /night
+                h1.type
+                  | Double Deluxe Room
+                p
+                  | We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to day,
+                  | also
+                  | asks us to remain physically young. Young at heart,
+                .row
+                  .col-lg-6.col-md-5
+                    ul
+                      li Air Condition
+                      li Car Parking
+                      li Swimming Pool
+                  .col-lg-6.col-md-5
+                    ul
+                      li Restaurant & Bar
+                      li Vehicle Rental
+                      li Complementary Meal
+                a.main_btn(href='#') Book Now
+              .room_right
+                h1.price
+                  i.fa.fa-dollar
+                  | 250
+                  span /night
+                h1.type
+                  | Double Deluxe Room
+                p
+                  | We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to day,
+                  | also
+                  | asks us to remain physically young. Young at heart,
+                .row
+                  .col-lg-6.col-md-5
+                    ul
+                      li Air Condition
+                      li Car Parking
+                      li Swimming Pool
+                  .col-lg-6.col-md-5
+                    ul
+                      li Restaurant & Bar
+                      li Vehicle Rental
+                      li Complementary Meal
+                a.main_btn(href='#') Book Now
+    // End Our Room Area
+    // ================Testimonials Area =================
+    section.testimonials-area.section_gap_top.color-bg
+      .container
+        .text-center
+          img.quote-img(src='img/quote.png', alt='')
+        .testi-slider.owl-carousel(data-slider-id='1')
+          .item
+            .testi-item
+              h4 Fanny Spencer
+              ul.list
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+              .wow.fadeIn(data-wow-duration='1s')
+                p
+                  | As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it,
+                  | you travel
+                  | across her face 
+                  br
+                  |  and She is the host to your journey.
+          .item
+            .testi-item
+              h4 Fanny Spencer
+              ul.list
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+              .wow.fadeIn(data-wow-duration='1s')
+                p
+                  | As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it,
+                  | you travel
+                  | across her face 
+                  br
+                  |  and She is the host to your journey.
+          .item
+            .testi-item
+              h4 Fanny Spencer
+              ul.list
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+              .wow.fadeIn(data-wow-duration='1s')
+                p
+                  | As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it,
+                  | you travel
+                  | across her face 
+                  br
+                  |  and She is the host to your journey.
+          .item
+            .testi-item
+              img(src='img/quote.png', alt='')
+              h4 Fanny Spencer
+              ul.list
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+                li
+                  a(href='#')
+                    i.fa.fa-star
+              .wow.fadeIn(data-wow-duration='1s')
+                p
+                  | As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it,
+                  | you travel
+                  | across her face 
+                  br
+                  |  and She is the host to your journey.
+        .owl-thumbs.d-flex.justify-content-center(data-slider-id='1')
+          .owl-thumb-item
+            div
+              img.img-fluid(src='img/testimonial/t1.png', alt='')
+            .overlay.overlay-grad
+          .owl-thumb-item
+            div
+              img.img-fluid(src='img/testimonial/t2.png', alt='')
+            .overlay.overlay-grad
+          .owl-thumb-item
+            div
+              img.img-fluid(src='img/testimonial/t3.png', alt='')
+            .overlay.overlay-grad
+          .owl-thumb-item
+            div
+              img.img-fluid(src='img/testimonial/t4.png', alt='')
+            .overlay.overlay-grad
+    // ================End Testimonials Area =================
+    // ================Latest Blog Area =================
+    section.latest_blog_area.section_gap.color-bg
+      .container
+        .row
+          .col-lg-12
+            .main_title
+              p.text-uppercase Our Blog Posts
+              h2
+                | Our Blog Posts
+              p
+                | nappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
+                | especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+                | inappropriate behavior is often laughed.
+        .row
+          .single-recent-blog.col-lg-4.col-md-6
+            .thumb
+              img.f-img.img-fluid.mx-auto(src='img/b1.jpg', alt='')
+            .bottom.d-flex.justify-content-between.align-items-center.flex-wrap
+              div
+                a.main_btn(href='#') Travel
+              .meta
+                span 30th Sep, 2018
+                span 02 Comments
+            a(href='#')
+              h4
+                | Low Cost Advertising let us know
+                | the side effect of printing
+            p
+              | Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer hears tales of
+              | diamonds and begins dreaming of vast riches. He sells his farm and hikes off over the horizon never heard.
+          .single-recent-blog.col-lg-4.col-md-6
+            .thumb
+              img.f-img.img-fluid.mx-auto(src='img/b2.jpg', alt='')
+            .bottom.d-flex.justify-content-between.align-items-center.flex-wrap
+              div
+                a.main_btn(href='#') Travel
+              .meta
+                span 30th Sep, 2018
+                span 02 Comments
+            a(href='#')
+              h4
+                | Low Cost Advertising let us know
+                | the side effect of printing
+            p
+              | Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer hears tales of
+              | diamonds and begins dreaming of vast riches. He sells his farm and hikes off over the horizon never heard.
+          .single-recent-blog.col-lg-4.col-md-6
+            .thumb
+              img.f-img.img-fluid.mx-auto(src='img/b3.jpg', alt='')
+            .bottom.d-flex.justify-content-between.align-items-center.flex-wrap
+              div
+                a.main_btn(href='#') Travel
+              .meta
+                span 30th Sep, 2018
+                span 02 Comments
+            a(href='#')
+              h4
+                | Low Cost Advertising let us know
+                | the side effect of printing
+            p
+              | Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer hears tales of
+              | diamonds and begins dreaming of vast riches. He sells his farm and hikes off over the horizon never heard.
+    // ================End Latest Blog Area =================
+    // ================ start footer Area  =================
+    footer.footer-area.section_gap
+      .container
+        .row
+          .col-lg-3.col-md-6.col-sm-6
+            .single-footer-widget
+              h6 About Agency
+              p
+                | The world has become so fasted that people don’t want to standby reading page of info they would much rather
+                | look at a presentation and understand message.
+          .col-lg-3.col-md-6.col-sm-6
+            .single-footer-widget
+              h6 Quick Links
+              .row
+                ul.col.footer-nav
+                  li
+                    a(href='#') Sitemaps
+                  li
+                    a(href='#') Categories
+                  li
+                    a(href='#') Archives
+                  li
+                    a(href='#') Advertise
+                  li
+                    a(href='#') Ad Choice
+                ul.col.footer-nav
+                  li
+                    a(href='#') Privacy Policy
+                  li
+                    a(href='#') Terms of Use
+                  li
+                    a(href='#') Help Center
+                  li
+                    a(href='#') Newsletters
+                  li
+                    a(href='#') Feedback
+          .col-lg-3.col-md-6.col-sm-6
+            .single-footer-widget
+              h6 Newsletter
+              p
+                | For business professionals caught between high OEM price mediocre print and graphic.
+              #mc_embed_signup
+                form.form-inline(target='_blank', novalidate='true', action='https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01', method='get')
+                  .d-flex.flex-row
+                    input.form-control(name='EMAIL', placeholder='Enter Email', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Enter Email '", required='', type='email')
+                    button.click-btn.btn.btn-default
+                      i.lnr.lnr-location(aria-hidden='true')
+                    div(style='position: absolute; left: -5000px;')
+                      input(name='b_36c4fd991d266f23781ded980_aefe40901a', tabindex='-1', value='', type='text')
+                    //
+                      <div class="col-lg-4 col-md-4">
+                      <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+                      </div>
+                  .info
+          .col-lg-3.col-md-6.col-sm-6
+            .single-footer-widget.mail-chimp
+              h6.mb-20 Instafeed
+              ul.instafeed.d-flex.flex-wrap
+                li
+                  img(src='img/instagram/Image-01.jpg', alt='')
+                li
+                  img(src='img/instagram/Image-02.jpg', alt='')
+                li
+                  img(src='img/instagram/Image-03.jpg', alt='')
+                li
+                  img(src='img/instagram/Image-04.jpg', alt='')
+                li
+                  img(src='img/instagram/Image-05.jpg', alt='')
+                li
+                  img(src='img/instagram/Image-06.jpg', alt='')
+                li
+                  img(src='img/instagram/Image-07.jpg', alt='')
+                li
+                  img(src='img/instagram/Image-08.jpg', alt='')
+        .footer-bottom.d-flex.justify-content-between.align-items-center.flex-wrap
+          div
+            p.footer-text.m-0
+              // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+              | Copyright ©
+              script.
+                document.write(new Date().getFullYear());
+              |  All rights reserved | This template is made with 
+              i.fa.fa-heart-o(aria-hidden='true')
+              |  by 
+              a(href='https://colorlib.com', target='_blank') Colorlib
+              // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+          .footer-social.d-flex.align-items-center
+            a(href='#')
+              i.fa.fa-facebook
+            a(href='#')
+              i.fa.fa-twitter
+            a(href='#')
+              i.fa.fa-dribbble
+            a(href='#')
+              i.fa.fa-behance
+    // ================ End footer Area  =================
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='js/jquery.min.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    script(src='js/popper.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/stellar.js')
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA')
+    script(src='vendors/lightbox/simpleLightbox.min.js')
+    script(src='vendors/nice-select/js/jquery.nice-select.min.js')
+    script(src='vendors/isotope/imagesloaded.pkgd.min.js')
+    script(src='vendors/isotope/isotope.pkgd.min.js')
+    script(src='vendors/owl-carousel/owl.carousel.min.js')
+    script(src='js/owl-carousel-thumb.min.js')
+    script(src='vendors/popup/jquery.magnific-popup.min.js')
+    script(src='js/jquery.ajaxchimp.min.js')
+    script(src='vendors/counter-up/jquery.waypoints.min.js')
+    script(src='vendors/counter-up/jquery.counterup.js')
+    script(src='js/mail-script.js')
+    script(src='js/theme.js')

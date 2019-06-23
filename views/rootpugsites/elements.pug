@@ -1,0 +1,682 @@
+doctype html
+html(lang='en')
+  head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='icon', href='img/favicon.png', type='image/png')
+    title Elements
+    // Bootstrap CSS
+    link(rel='stylesheet', href='css/bootstrap.css')
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    link(rel='stylesheet', href='vendors/linericon/style.css')
+    link(rel='stylesheet', href='css/font-awesome.min.css')
+    link(rel='stylesheet', href='vendors/owl-carousel/owl.carousel.min.css')
+    link(rel='stylesheet', href='vendors/lightbox/simpleLightbox.css')
+    link(rel='stylesheet', href='vendors/nice-select/css/nice-select.css')
+    link(rel='stylesheet', href='vendors/animate-css/animate.css')
+    link(rel='stylesheet', href='vendors/popup/magnific-popup.css')
+    // main css
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='css/responsive.css')
+  body
+    // ================Header Menu Area =================
+    header.header_area
+      .top_menu.row.m0
+        .container
+          .float-left
+            ul.list.header_social
+              li
+                a(href='#') Contact Us +44 (012) 5689 3264
+          .float-right
+            select
+              option(value='1') USD
+              option(value='1') EUR
+              option(value='1') AOA
+              option(value='1') AUD
+            select
+              option(value='1') ENG
+              option(value='1') FRA
+              option(value='1') BAN
+      .main_menu
+        nav.navbar.navbar-expand-lg.navbar-light
+          .container
+            // Brand and toggle get grouped for better mobile display
+            a.navbar-brand.logo_h(href='index.html')
+              img(src='img/logo.png', alt='')
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            // Collect the nav links, forms, and other content for toggling
+            #navbarSupportedContent.collapse.navbar-collapse.offset
+              ul.nav.navbar-nav.menu_nav.ml-auto
+                li.nav-item
+                  a.nav-link(href='index.html') Home
+                li.nav-item
+                  a.nav-link(href='about-us.html') About
+                li.nav-item
+                  a.nav-link(href='gallery.html') Gallery
+                li.nav-item.submenu.dropdown.active
+                  a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Pages
+                  ul.dropdown-menu
+                    li.nav-item
+                      a.nav-link(href='elements.html') Elements
+                    li.nav-item
+                      a.nav-link(href='rooms.html') Rooms
+                li.nav-item.submenu.dropdown
+                  a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Blog
+                  ul.dropdown-menu
+                    li.nav-item
+                      a.nav-link(href='blog.html') Blog
+                    li.nav-item
+                      a.nav-link(href='single-blog.html') Blog Details
+                li.nav-item
+                  a.nav-link(href='contact.html') Contact
+    // ================Header Menu Area =================
+    // ================Home Banner Area =================
+    section.banner_area
+      .banner_inner.d-flex.align-items-center
+        .overlay.bg-parallax(data-stellar-ratio='0.9', data-stellar-vertical-offset='0', data-background='')
+        .container
+          .banner_content.text-center
+            h2 Elements
+            .page_link
+              a(href='index.html') Home
+              a(href='elements.html') Elements
+    // ================End Home Banner Area =================
+    // Start Sample Area
+    section.sample-text-area
+      .container
+        h3.text-heading.title_color Text Sample
+        p.sample-text
+          | Every avid independent filmmaker has 
+          b Bold
+          |  about making that 
+          i Italic
+          |  interest documentary, or short
+          | 				film to show off their creative prowess. Many have great ideas and want to “wow” the
+          sup Superscript
+          |  scene,
+          | 				or video renters with their big project. But once you have the
+          sub Subscript
+          |  “in the can” (no easy feat), how
+          | 				do you move from a 
+          del Strike
+          |  through of master DVDs with the 
+          u “Underline”
+          |  marked hand-written title
+          | 				inside a secondhand CD case, to a pile of cardboard boxes full of shiny new, retail-ready DVDs, with UPC barcodes
+          | 				and polywrap sitting on your doorstep? You need to create eye-popping artwork and have your project replicated.
+          | 				Using a reputable full service DVD Replication company like PacificDisc, Inc. to partner with is certainly a
+          | 				helpful option to ensure a professional end result, but to help with your DVD replication project, here are 4 easy
+          | 				steps to follow for good DVD replication results:
+    // End Sample Area
+    // Start Button
+    section.button-area
+      .container.border-top-generic
+        h3.text-heading.title_color Sample Buttons
+        .button-group-area
+          a.genric-btn.default(href='#') Default
+          a.genric-btn.primary(href='#') Primary
+          a.genric-btn.success(href='#') Success
+          a.genric-btn.info(href='#') Info
+          a.genric-btn.warning(href='#') Warning
+          a.genric-btn.danger(href='#') Danger
+          a.genric-btn.link(href='#') Link
+          a.genric-btn.disable(href='#') Disable
+        .button-group-area.mt-10
+          a.genric-btn.default-border(href='#') Default
+          a.genric-btn.primary-border(href='#') Primary
+          a.genric-btn.success-border(href='#') Success
+          a.genric-btn.info-border(href='#') Info
+          a.genric-btn.warning-border(href='#') Warning
+          a.genric-btn.danger-border(href='#') Danger
+          a.genric-btn.link-border(href='#') Link
+          a.genric-btn.disable(href='#') Disable
+        .button-group-area.mt-40
+          a.genric-btn.default.radius(href='#') Default
+          a.genric-btn.primary.radius(href='#') Primary
+          a.genric-btn.success.radius(href='#') Success
+          a.genric-btn.info.radius(href='#') Info
+          a.genric-btn.warning.radius(href='#') Warning
+          a.genric-btn.danger.radius(href='#') Danger
+          a.genric-btn.link.radius(href='#') Link
+          a.genric-btn.disable.radius(href='#') Disable
+        .button-group-area.mt-10
+          a.genric-btn.default-border.radius(href='#') Default
+          a.genric-btn.primary-border.radius(href='#') Primary
+          a.genric-btn.success-border.radius(href='#') Success
+          a.genric-btn.info-border.radius(href='#') Info
+          a.genric-btn.warning-border.radius(href='#') Warning
+          a.genric-btn.danger-border.radius(href='#') Danger
+          a.genric-btn.link-border.radius(href='#') Link
+          a.genric-btn.disable.radius(href='#') Disable
+        .button-group-area.mt-40
+          a.genric-btn.default.circle(href='#') Default
+          a.genric-btn.primary.circle(href='#') Primary
+          a.genric-btn.success.circle(href='#') Success
+          a.genric-btn.info.circle(href='#') Info
+          a.genric-btn.warning.circle(href='#') Warning
+          a.genric-btn.danger.circle(href='#') Danger
+          a.genric-btn.link.circle(href='#') Link
+          a.genric-btn.disable.circle(href='#') Disable
+        .button-group-area.mt-10
+          a.genric-btn.default-border.circle(href='#') Default
+          a.genric-btn.primary-border.circle(href='#') Primary
+          a.genric-btn.success-border.circle(href='#') Success
+          a.genric-btn.info-border.circle(href='#') Info
+          a.genric-btn.warning-border.circle(href='#') Warning
+          a.genric-btn.danger-border.circle(href='#') Danger
+          a.genric-btn.link-border.circle(href='#') Link
+          a.genric-btn.disable.circle(href='#') Disable
+        .button-group-area.mt-40
+          a.genric-btn.default.circle.arrow(href='#')
+            | Default
+            span.lnr.lnr-arrow-right
+          a.genric-btn.primary.circle.arrow(href='#')
+            | Primary
+            span.lnr.lnr-arrow-right
+          a.genric-btn.success.circle.arrow(href='#')
+            | Success
+            span.lnr.lnr-arrow-right
+          a.genric-btn.info.circle.arrow(href='#')
+            | Info
+            span.lnr.lnr-arrow-right
+          a.genric-btn.warning.circle.arrow(href='#')
+            | Warning
+            span.lnr.lnr-arrow-right
+          a.genric-btn.danger.circle.arrow(href='#')
+            | Danger
+            span.lnr.lnr-arrow-right
+        .button-group-area.mt-10
+          a.genric-btn.default-border.circle.arrow(href='#')
+            | Default
+            span.lnr.lnr-arrow-right
+          a.genric-btn.primary-border.circle.arrow(href='#')
+            | Primary
+            span.lnr.lnr-arrow-right
+          a.genric-btn.success-border.circle.arrow(href='#')
+            | Success
+            span.lnr.lnr-arrow-right
+          a.genric-btn.info-border.circle.arrow(href='#')
+            | Info
+            span.lnr.lnr-arrow-right
+          a.genric-btn.warning-border.circle.arrow(href='#')
+            | Warning
+            span.lnr.lnr-arrow-right
+          a.genric-btn.danger-border.circle.arrow(href='#')
+            | Danger
+            span.lnr.lnr-arrow-right
+        .button-group-area.mt-40
+          a.genric-btn.primary.e-large(href='#') Extra Large
+          a.genric-btn.success.large(href='#') Large
+          a.genric-btn.primary(href='#') Default
+          a.genric-btn.success.medium(href='#') Medium
+          a.genric-btn.primary.small(href='#') Small
+        .button-group-area.mt-10
+          a.genric-btn.primary-border.e-large(href='#') Extra Large
+          a.genric-btn.success-border.large(href='#') Large
+          a.genric-btn.primary-border(href='#') Default
+          a.genric-btn.success-border.medium(href='#') Medium
+          a.genric-btn.primary-border.small(href='#') Small
+    // End Button
+    // Start Align Area
+    .whole-wrap
+      .container
+        .section-top-border
+          h3.mb-30.title_color Left Aligned
+          .row
+            .col-md-3
+              img.img-fluid(src='img/elements/d.jpg', alt='')
+            .col-md-9.mt-sm-20.left-align-p
+              p
+                | Recently, the US Federal government banned online casinos from operating in America by making it illegal to
+                | transfer money to them through any US bank or payment system. As a result of this law, most of the popular
+                | online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino
+                | players found themselves being chased by the Federal government. But, after a fortnight, the online casino
+                | industry came up with a solution and new online casinos started taking root. These began to operate under a
+                | different business umbrella, and by doing that, rendered the transfer of money to and from them legal. A major
+                | part of this was enlisting electronic banking systems that would accept this new clarification and start doing
+                | business with me. Listed in this article are the electronic banking systems that accept players from the United
+                | States that wish to play in online casinos.
+        .section-top-border.text-right
+          h3.mb-30.title_color Right Aligned
+          .row
+            .col-md-9
+              p.text-right
+                | Over time, even the most sophisticated, memory packed computer can begin to run slow if we
+                | don’t do something to prevent it. The reason why has less to do with how computers are made and how they age and
+                | more to do with the way we use them. You see, all of the daily tasks that we do on our PC from running programs
+                | to downloading and deleting software can make our computer sluggish. To keep this from happening, you need to
+                | understand the reasons why your PC is getting slower and do something to keep your PC running at its best. You
+                | can do this through regular maintenance and PC performance optimization programs
+              p.text-right
+                | Before we discuss all of the things that could be affecting your PC’s performance, let’s
+                | talk a little about what symptoms
+            .col-md-3
+              img.img-fluid(src='img/elements/d.jpg', alt='')
+        .section-top-border
+          h3.mb-30.title_color Definition
+          .row
+            .col-md-4
+              .single-defination
+                h4.mb-20 Definition 01
+                p
+                  | Recently, the US Federal government banned online casinos from operating in America by making it illegal to
+                  | transfer money to them through any US bank or payment system. As a result of this law, most of the popular
+                  | online casino networks
+            .col-md-4
+              .single-defination
+                h4.mb-20 Definition 02
+                p
+                  | Recently, the US Federal government banned online casinos from operating in America by making it illegal to
+                  | transfer money to them through any US bank or payment system. As a result of this law, most of the popular
+                  | online casino networks
+            .col-md-4
+              .single-defination
+                h4.mb-20 Definition 03
+                p
+                  | Recently, the US Federal government banned online casinos from operating in America by making it illegal to
+                  | transfer money to them through any US bank or payment system. As a result of this law, most of the popular
+                  | online casino networks
+        .section-top-border
+          h3.mb-30.title_color Block Quotes
+          .row
+            .col-lg-12
+              blockquote.generic-blockquote
+                | “Recently, the US Federal government banned online casinos from operating in America by making it illegal to
+                | transfer money to them through any US bank or payment system. As a result of this law, most of the popular
+                | online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino
+                | players found themselves being chased by the Federal government. But, after a fortnight, the online casino
+                | industry came up with a solution and new online casinos started taking root. These began to operate under a
+                | different business umbrella, and by doing that, rendered the transfer of money to and from them legal. A major
+                | part of this was enlisting electronic banking systems that would accept this new clarification and start doing
+                | business with me. Listed in this article are the electronic banking”
+        .section-top-border
+          h3.mb-30.title_color Table
+          .progress-table-wrap
+            .progress-table
+              .table-head
+                .serial #
+                .country Countries
+                .visit Visits
+                .percentage Percentages
+              .table-row
+                .serial 01
+                .country
+                  img(src='img/elements/f1.jpg', alt='flag')
+                  | Canada
+                .visit 645032
+                .percentage
+                  .progress
+                    .progress-bar.color-1(role='progressbar', style='width: 80%', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
+              .table-row
+                .serial 02
+                .country
+                  img(src='img/elements/f2.jpg', alt='flag')
+                  | Canada
+                .visit 645032
+                .percentage
+                  .progress
+                    .progress-bar.color-2(role='progressbar', style='width: 30%', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100')
+              .table-row
+                .serial 03
+                .country
+                  img(src='img/elements/f3.jpg', alt='flag')
+                  | Canada
+                .visit 645032
+                .percentage
+                  .progress
+                    .progress-bar.color-3(role='progressbar', style='width: 55%', aria-valuenow='55', aria-valuemin='0', aria-valuemax='100')
+              .table-row
+                .serial 04
+                .country
+                  img(src='img/elements/f4.jpg', alt='flag')
+                  | Canada
+                .visit 645032
+                .percentage
+                  .progress
+                    .progress-bar.color-4(role='progressbar', style='width: 60%', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100')
+              .table-row
+                .serial 05
+                .country
+                  img(src='img/elements/f5.jpg', alt='flag')
+                  | Canada
+                .visit 645032
+                .percentage
+                  .progress
+                    .progress-bar.color-5(role='progressbar', style='width: 40%', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100')
+              .table-row
+                .serial 06
+                .country
+                  img(src='img/elements/f6.jpg', alt='flag')
+                  | Canada
+                .visit 645032
+                .percentage
+                  .progress
+                    .progress-bar.color-6(role='progressbar', style='width: 70%', aria-valuenow='70', aria-valuemin='0', aria-valuemax='100')
+              .table-row
+                .serial 07
+                .country
+                  img(src='img/elements/f7.jpg', alt='flag')
+                  | Canada
+                .visit 645032
+                .percentage
+                  .progress
+                    .progress-bar.color-7(role='progressbar', style='width: 30%', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100')
+              .table-row
+                .serial 08
+                .country
+                  img(src='img/elements/f8.jpg', alt='flag')
+                  | Canada
+                .visit 645032
+                .percentage
+                  .progress
+                    .progress-bar.color-8(role='progressbar', style='width: 60%', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100')
+        .section-top-border
+          h3.title_color Image Gallery
+          .row.gallery-item
+            .col-md-4
+              a.img-gal(href='img/elements/g1.jpg')
+                .single-gallery-image(style='background: url(img/elements/g1.jpg);')
+            .col-md-4
+              a.img-gal(href='img/elements/g2.jpg')
+                .single-gallery-image(style='background: url(img/elements/g2.jpg);')
+            .col-md-4
+              a.img-gal(href='img/elements/g3.jpg')
+                .single-gallery-image(style='background: url(img/elements/g3.jpg);')
+            .col-md-6
+              a.img-gal(href='img/elements/g4.jpg')
+                .single-gallery-image(style='background: url(img/elements/g4.jpg);')
+            .col-md-6
+              a.img-gal(href='img/elements/g5.jpg')
+                .single-gallery-image(style='background: url(img/elements/g5.jpg);')
+            .col-md-4
+              a.img-gal(href='img/elements/g6.jpg')
+                .single-gallery-image(style='background: url(img/elements/g6.jpg);')
+            .col-md-4
+              a.img-gal(href='img/elements/g7.jpg')
+                .single-gallery-image(style='background: url(img/elements/g7.jpg);')
+            .col-md-4
+              a.img-gal(href='img/elements/g8.jpg')
+                .single-gallery-image(style='background: url(img/elements/g8.jpg);')
+        .section-top-border
+          .row
+            .col-lg-4.col-sm-6.typo-sec
+              h3.mb-20.title_color Typography
+              .typography
+                h1.typo-list This is header 01
+                h2.typo-list This is header 02
+                h3.typo-list This is header 03
+                h4.typo-list This is header 04
+                h5.typo-list This is header 01
+                h6.typo-list This is header 01
+            .col-lg-4.col-sm-6.mt-sm-30.typo-sec
+              h3.mb-20.title_color Unordered List
+              div
+                ul.unordered-list
+                  li Fta Keys
+                  li For Women Only Your Computer Usage
+                  li
+                    | Facts Why Inkjet Printing Is Very Appealing
+                    ul
+                      li
+                        | Addiction When Gambling Becomes
+                        ul
+                          li Protective Preventative Maintenance
+                  li Dealing With Technical Support 10 Useful Tips
+                  li Make Myspace Your Best Designed Space
+                  li Cleaning And Organizing Your Computer
+            .col-lg-4.col-sm-6.mt-sm-30.typo-sec
+              h3.mb-20.title_color Ordered List
+              div
+                ol.ordered-list
+                  li
+                    span Fta Keys
+                  li
+                    span For Women Only Your Computer Usage
+                  li
+                    span Facts Why Inkjet Printing Is Very Appealing
+                    ol.ordered-list-alpha
+                      li
+                        span Addiction When Gambling Becomes
+                        ol.ordered-list-roman
+                          li
+                            span Protective Preventative Maintenance
+                  li
+                    span Dealing With Technical Support 10 Useful Tips
+                  li
+                    span Make Myspace Your Best Designed Space
+                  li
+                    span Cleaning And Organizing Your Computer
+        .section-top-border
+          .row
+            .col-lg-8.col-md-8
+              h3.mb-30.title_color Form Element
+              form(action='#')
+                .mt-10
+                  input.single-input(type='text', name='first_name', placeholder='First Name', onfocus="this.placeholder = ''", onblur="this.placeholder = 'First Name'", required='')
+                .mt-10
+                  input.single-input(type='text', name='last_name', placeholder='Last Name', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Last Name'", required='')
+                .mt-10
+                  input.single-input(type='text', name='last_name', placeholder='Last Name', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Last Name'", required='')
+                .mt-10
+                  input.single-input(type='email', name='EMAIL', placeholder='Email address', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Email address'", required='')
+                .input-group-icon.mt-10
+                  .icon
+                    i.fa.fa-thumb-tack(aria-hidden='true')
+                  input.single-input(type='text', name='address', placeholder='Address', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Address'", required='')
+                .input-group-icon.mt-10
+                  .icon
+                    i.fa.fa-plane(aria-hidden='true')
+                  #default-select.form-select
+                    select
+                      option(value='1') City
+                      option(value='1') Dhaka
+                      option(value='1') Dilli
+                      option(value='1') Newyork
+                      option(value='1') Islamabad
+                .input-group-icon.mt-10
+                  .icon
+                    i.fa.fa-globe(aria-hidden='true')
+                  #default-select2.form-select
+                    select
+                      option(value='1') Country
+                      option(value='1') Bangladesh
+                      option(value='1') India
+                      option(value='1') England
+                      option(value='1') Srilanka
+                .mt-10
+                  textarea.single-textarea(placeholder='Message', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Message'", required='')
+                .mt-10
+                  input.single-input-primary(type='text', name='first_name', placeholder='Primary color', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Primary color'", required='')
+                .mt-10
+                  input.single-input-accent(type='text', name='first_name', placeholder='Accent color', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Accent color'", required='')
+                .mt-10
+                  input.single-input-secondary(type='text', name='first_name', placeholder='Secondary color', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Secondary color'", required='')
+            .col-lg-3.col-md-4.mt-sm-30.element-wrap
+              .single-element-widget
+                h3.mb-30.title_color Switches
+                .switch-wrap.d-flex.justify-content-between
+                  p 01. Sample Switch
+                  .primary-switch
+                    input#default-switch(type='checkbox')
+                    label(for='default-switch')
+                .switch-wrap.d-flex.justify-content-between
+                  p 02. Primary Color Switch
+                  .primary-switch
+                    input#primary-switch(type='checkbox', checked='')
+                    label(for='primary-switch')
+                .switch-wrap.d-flex.justify-content-between
+                  p 03. Confirm Color Switch
+                  .confirm-switch
+                    input#confirm-switch(type='checkbox', checked='')
+                    label(for='confirm-switch')
+              .single-element-widget
+                h3.mb-30.title_color Selectboxes
+                #default-select.default-select
+                  select
+                    option(value='1') English
+                    option(value='1') Spanish
+                    option(value='1') Arabic
+                    option(value='1') Portuguise
+                    option(value='1') Bengali
+              .single-element-widget
+                h3.mb-30.title_color Checkboxes
+                .switch-wrap.d-flex.justify-content-between
+                  p 01. Sample Checkbox
+                  .primary-checkbox
+                    input#default-checkbox(type='checkbox')
+                    label(for='default-checkbox')
+                .switch-wrap.d-flex.justify-content-between
+                  p 02. Primary Color Checkbox
+                  .primary-checkbox
+                    input#primary-checkbox(type='checkbox', checked='')
+                    label(for='primary-checkbox')
+                .switch-wrap.d-flex.justify-content-between
+                  p 03. Confirm Color Checkbox
+                  .confirm-checkbox
+                    input#confirm-checkbox(type='checkbox')
+                    label(for='confirm-checkbox')
+                .switch-wrap.d-flex.justify-content-between
+                  p 04. Disabled Checkbox
+                  .disabled-checkbox
+                    input#disabled-checkbox(type='checkbox', disabled='')
+                    label(for='disabled-checkbox')
+                .switch-wrap.d-flex.justify-content-between
+                  p 05. Disabled Checkbox active
+                  .disabled-checkbox
+                    input#disabled-checkbox-active(type='checkbox', checked='', disabled='')
+                    label(for='disabled-checkbox-active')
+              .single-element-widget
+                h3.mb-30.title_color Radios
+                .switch-wrap.d-flex.justify-content-between
+                  p 01. Sample radio
+                  .primary-radio
+                    input#default-radio(type='checkbox')
+                    label(for='default-radio')
+                .switch-wrap.d-flex.justify-content-between
+                  p 02. Primary Color radio
+                  .primary-radio
+                    input#primary-radio(type='checkbox', checked='')
+                    label(for='primary-radio')
+                .switch-wrap.d-flex.justify-content-between
+                  p 03. Confirm Color radio
+                  .confirm-radio
+                    input#confirm-radio(type='checkbox', checked='')
+                    label(for='confirm-radio')
+                .switch-wrap.d-flex.justify-content-between
+                  p 04. Disabled radio
+                  .disabled-radio
+                    input#disabled-radio(type='checkbox', disabled='')
+                    label(for='disabled-radio')
+                .switch-wrap.d-flex.justify-content-between
+                  p 05. Disabled radio active
+                  .disabled-radio
+                    input#disabled-radio-active(type='checkbox', checked='', disabled='')
+                    label(for='disabled-radio-active')
+    // End Align Area
+    // ================ start footer Area  =================
+    footer.footer-area.p_120
+      .container
+        .row
+          .col-lg-2.col-md-6.col-sm-6
+            .single-footer-widget.tp_widgets
+              h6.footer_title Top Products
+              ul.list
+                li
+                  a(href='#') Managed Website
+                li
+                  a(href='#') Manage Reputation
+                li
+                  a(href='#') Power Tools
+                li
+                  a(href='#') Marketing Service
+          .col-lg-2.col-md-6.col-sm-6
+            .single-footer-widget.tp_widgets
+              h6.footer_title Quick Links
+              ul.list
+                li
+                  a(href='#') Jobs
+                li
+                  a(href='#') Brand Assets
+                li
+                  a(href='#') Investor Relations
+                li
+                  a(href='#') Terms of Service
+          .col-lg-2.col-md-6.col-sm-6
+            .single-footer-widget.tp_widgets
+              h6.footer_title Features
+              ul.list
+                li
+                  a(href='#') Jobs
+                li
+                  a(href='#') Brand Assets
+                li
+                  a(href='#') Investor Relations
+                li
+                  a(href='#') Terms of Service
+          .col-lg-2.col-md-6.col-sm-6
+            .single-footer-widget.tp_widgets
+              h6.footer_title Resources
+              ul.list
+                li
+                  a(href='#') Guides
+                li
+                  a(href='#') Research
+                li
+                  a(href='#') Experts
+                li
+                  a(href='#') Agencies
+          .col-lg-4.col-md-6.col-sm-6
+            aside.f_widget.news_widget
+              .f_title
+                h3.footer_title Newsletter
+              p Stay updated with our latest trends
+              #mc_embed_signup
+                form.subscribe_form.relative(target='_blank', action='https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01', method='get')
+                  .input-group.d-flex.flex-row
+                    input(name='EMAIL', placeholder='Enter email address', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Email Address '", required='', type='email')
+                    button.btn.sub-btn
+                      span.lnr.lnr-arrow-right
+                  .mt-10.info
+        .row.footer-bottom.d-flex.justify-content-between.align-items-center
+          p.col-lg-8.col-md-8.footer-text.m-0
+            // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+            | Copyright ©
+            script.
+              document.write(new Date().getFullYear());
+            |  All rights reserved | This template is made with 
+            i.fa.fa-heart-o(aria-hidden='true')
+            |  by 
+            a(href='https://colorlib.com', target='_blank') Colorlib
+            // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+          .col-lg-4.col-md-4.footer-social
+            a(href='#')
+              i.fa.fa-facebook
+            a(href='#')
+              i.fa.fa-twitter
+            a(href='#')
+              i.fa.fa-dribbble
+            a(href='#')
+              i.fa.fa-behance
+    // ================ End footer Area  =================
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='js/jquery.min.js')
+    script(src='js/popper.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/stellar.js')
+    script(src='vendors/lightbox/simpleLightbox.min.js')
+    script(src='vendors/nice-select/js/jquery.nice-select.min.js')
+    script(src='vendors/isotope/imagesloaded.pkgd.min.js')
+    script(src='vendors/isotope/isotope.pkgd.min.js')
+    script(src='vendors/popup/jquery.magnific-popup.min.js')
+    script(src='vendors/owl-carousel/owl.carousel.min.js')
+    script(src='vendors/jquery-ui/jquery-ui.js')
+    script(src='js/jquery.ajaxchimp.min.js')
+    script(src='vendors/counter-up/jquery.waypoints.min.js')
+    script(src='vendors/counter-up/jquery.counterup.js')
+    script(src='js/mail-script.js')
+    script(src='js/theme.js')

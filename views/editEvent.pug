@@ -1,0 +1,67 @@
+extends layout
+
+block content
+
+  // ================ Start banner Area =================
+  section.banner-area.relative
+    .container
+      .row.height.align-items-center.justify-content-center
+        .banner-content.col-lg-6
+          h1 Event Database
+          hr
+          .breadcrmb
+            p
+              a(href='index.html') Databases
+              span.lnr.lnr-arrow-right
+              a(href='about.html') From  ../models
+              a(href="/contactDatabase")
+                li Contact
+              a(href="/eventDatabase")
+                li Event
+              a(href="/userDatabase")
+                li User
+
+  // ============ content =====================
+section.section.bg-light.pb-0
+      .container
+          #next.row.check-availabilty
+              .block-32(data-aos='fade-up' data-aos-offset='-200')
+                  form(action=`/event/update/${event.id}` method='POST')
+                      .row
+                          .col-md-6.mb-3.mb-lg-0.col-lg-3
+                              label.font-weight-bold.text-black(for='checkin_date') Check In
+                              .field-icon-wrap
+                                  .icon
+                                      span.icon-calendar
+                                  input#checkin_date.form-control(name='eventDateIn', placeholder='Check In Date', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Check In Date'", required='', type='text')
+                          .col-md-6.mb-3.mb-lg-0.col-lg-3
+                              label.font-weight-bold.text-black(for='checkout_date') Check Out
+                              .field-icon-wrap
+                                  .icon
+                                      span.icon-calendar
+                                  input#checkout_date.form-control(name='eventDateOut', placeholder='Check Out Date', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Check Out Date'", required='', type='text')
+                          .col-md-6.mb-3.mb-md-0.col-lg-3
+                              .row
+                                  .col-md-6.mb-3.mb-md-0
+                                      label.font-weight-bold.text-black(for='adults') Adults
+                                      .field-icon-wrap
+                                          .icon
+                                              span.ion-ios-arrow-down
+                                          select#adults.form-control(name='adults', tabindex='0')
+                                              option(value='') 1
+                                              option(value='') 2
+                                              option(value='') 3
+                                              option(value='') 4+
+                                  .col-md-6.mb-3.mb-md-0
+                                      label.font-weight-bold.text-black(for='children') Children
+                                      .field-icon-wrap
+                                          .icon
+                                              span.ion-ios-arrow-down
+                                          select#children.form-control(name='children', tabindex='0')
+                                              option(value='') 1
+                                              option(value='') 2
+                                              option(value='') 3
+                                              option(value='') 4+
+                          .col-md-6.col-lg-3.align-self-end
+                              button.btn.btn-primary.btn-block.text-white Check Availabilty
+

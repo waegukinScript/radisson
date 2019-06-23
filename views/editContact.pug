@@ -1,0 +1,48 @@
+extends layout
+
+block content
+
+  // ================ Start banner Area =================
+  section.banner-area.relative
+    .container
+      .row.height.align-items-center.justify-content-center
+        .banner-content.col-lg-6
+          h1 Contact Database
+          hr
+          .breadcrmb
+            p
+              a(href='index.html') Databases
+              span.lnr.lnr-arrow-right
+              a(href='about.html') From  ../models
+              a(href="/contactDatabase")
+                li Contact
+              a(href="/eventDatabase")
+                li Event
+              a(href="/userDatabase")
+                li User
+
+  // ============ content =====================
+  section.gallery-area.section-gap.mt-172
+    .container
+      .row.align-items-center
+        .col-lg-6.col-md-5.col-sm-6
+          .single-gallery.mt--350
+
+              form.contact-form(action=`/contact/update/${contact.id}` method='POST')
+                .row
+                  .col-lg-12.d-flex.flex-column.mb-20
+                    input(type='hidden', name='_csrf', value=_csrf)
+                    input.form-control(name='contactName' value=`${contact.contactName}` placeholder='Contact Name' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'" required='' type='text')
+                  .col-lg-12.d-flex.flex-column.mb-20
+                    input.form-control(name='emailAddress' value=`${contact.emailAddress}` placeholder='Email Address' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required='' type='email')
+                  .col-lg-12.d-flex.flex-column.mb-20
+                    input.form-control(name='phoneNumber' value=`${contact.phoneNumber}` placeholder='Phone Number' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'" required='' type='text')
+                  .col-lg-12.d-flex.flex-column
+                    textarea.form-control(name='postMessage' placeholder=`${contact.postMessage}` onfocus="this.placeholder = ''" onblur="this.placeholder = 'Post a message'" required='')
+                  .col-lg-12.d-flex.justify-content-end
+                      button.btn.btn-md.btn-success(type='submit' style='margin-top:10px')
+                          i.fas.fa-pencil-square-o.fa-sm
+                          | Update
+                  .alert-msg
+                  //
+

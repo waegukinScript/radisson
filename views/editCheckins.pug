@@ -1,0 +1,70 @@
+extends layout
+
+block content
+
+  // ================ Start banner Area =================
+  section.banner-area.relative
+    .container
+      .row.height.align-items-center.justify-content-center
+        .banner-content.col-lg-6
+          h1 Event Database
+          hr
+          .breadcrmb
+            p
+              a(href='index.html') Databases
+              span.lnr.lnr-arrow-right
+              a(href='about.html') From  ../models
+              a(href="/contactDatabase")
+                li Contact
+              a(href="/eventDatabase")
+                li Event
+              a(href="/userDatabase")
+                li User
+
+  // ============ content =====================
+  section.gallery-area.section-gap.mt-172
+    .container
+      .row.align-items-center
+        .col-lg-6.col-md-5.col-sm-6
+          .single-gallery.mt--350
+              form#myFormEvent.booking-form(action=`/event/update/${event.id}` method='POST')
+                  .row
+                      .col-lg-12.d-flex.flex-column.mb-20
+                          input.form-control(name='eventName', value=`${event.eventName}` placeholder='Event Name',  onfocus="this.placeholder = ''", onblur="this.placeholder = 'Event Name'", required='', type='text')
+                      .input-group.col-lg-6.mb-20
+                          input#event_date.form-control.datepicker(name='eventDate', value=`${event.eventDate}` placeholder='Event Date', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Event Date'", required='', type='text')
+                          span.input-group-append
+                              button.btn.btn-outline-secondary.border-left-0.border-0(type='button')
+                                  i.fa.fa-calendar.reservation-calendar
+                      .col-lg-6.d-flex.flex-column.mb-20
+                          input.form-control(name='budget', placeholder='Budget',value=`${event.budget}` onfocus="this.placeholder = ''", onblur="this.placeholder = 'Budget'", required='', type='text')
+                      .col-lg-6.d-flex.flex-column.mb-20
+                         select.form-control(name='eventTime')
+                            //option(value=`${event.eventTime}`)
+                            option(value=event.eventTime selected) #{event.eventTime}
+                            option 05pm
+                            option 08pm
+                            option 09pm
+                      .col-lg-6.d-flex.flex-column.mb-20
+                         select.form-control(name='guest')
+                            //option(value=`${event.guest}`)
+                            option(value=event.guest selected) #{event.guest}
+                            option Number of guests 1
+                            option Number of guests 1
+                            option Number of guests 1
+                      .col-lg-12.d-flex.flex-column.mb-20
+                          input.form-control(name='contactName', placeholder='Contact Name',value=`${event.contactName}` onfocus="this.placeholder = ''", onblur="this.placeholder = 'Contact Name'", required='', type='text')
+                      .col-lg-12.d-flex.flex-column.mb-20
+                          input.form-control(name='emailAddress', placeholder='Email Address',value=`${event.emailAddress}` onfocus="this.placeholder = ''", onblur="this.placeholder = 'Email Address'", required='', type='email')
+                      .col-lg-12.d-flex.flex-column.mb-20
+                          input.form-control(name='phoneNumber', placeholder='Phone Number',value=`${event.phoneNumber}` onfocus="this.placeholder = ''", onblur="this.placeholder = 'Phone Number'", required='', type='text')
+                      .col-lg-12.d-flex.flex-column
+                          textarea.form-control(name='postMessage', placeholder=`${event.postMessage}`, onfocus="this.placeholder = ''", onblur="this.placeholder = 'Post a message'", required='')
+                      .col-lg-12.d-flex.justify-content-end
+                          br
+                          button.btn.btn-md.btn-success(type='submit')
+                              i.fas.fa-pencil-square-o.fa-sm
+                              | Update
+
+                      .alert-msg
+
