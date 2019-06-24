@@ -1,16 +1,14 @@
 const fs = require('fs');
 const pdf = require('html-pdf');
 const jade = require('jade');
+const Event = require('../models/Event');
 
 exports.postEvent = (req, res, next) => {
   const obj = req.body;
-  console.log('Events');
-  console.log(obj);
   const event = new Event({
-    eventDateIn: obj.eventDateIn,
-    eventDateOut: obj.eventDateOut,
-    adults: obj.adults,
-    children: obj.children,
+    CheckIn: obj.CheckIn,
+    CheckOut: obj.CheckOut,
+    Guests: obj.Guests
   });
   event.save((err) => {
     if (err) {
@@ -26,7 +24,7 @@ exports.postDeleteEvent = (req, res, next) => {
     if (err) {
       console.log(err);
     } else {
-      return res.redirect('back');
+      return res.redirect('/eventDatabase');
     }
   });
 };
@@ -52,10 +50,9 @@ exports.postUpdateEvent = (req, res, next) => {
     if (err) {
       console.log(err);
     } else if (event) {
-      event.eventDateIn = obj.eventDateIn;
-      event.eventDateOut = obj.eventDateOut;
-      event.adults = obj.adults;
-      event.children = obj.children;
+      event.CheckIn = obj.CheckIn;
+      event.CheckOut = obj.CheckOut;
+      event.Guests = obj.Guests;
       event.save((err) => {
         if (err) {
           return next(err);
@@ -65,7 +62,6 @@ exports.postUpdateEvent = (req, res, next) => {
     }
   });
 };
-
 
 exports.postGetReportEvent = (req, res, next) => {
   const { id } = (req.params);
@@ -90,28 +86,20 @@ exports.postGetReportEvent = (req, res, next) => {
                     }
                     </style>
                     <div style="margin-top: 50px">
-                      <h1 style="margin-left: 70px;">Event</h1>
+                      <h1 style="margin-left: 70px;">Booking Information</h1>
                       <hr style=" margin-top:0px; height:10px;border:none;color:#333;background-color:#333; margin-left: 70px; margin-right: 73px;" />
                       <table border="1">
                         <tr>
-                          <td class="heading">Event Name</td>
-                          <td class="value">${event.eventDateIn}</td>
+                          <td class="heading">Check In</td>
+                          <td class="value">${event.CheckIn}</td>
                         </tr>
                         <tr>
-                          <td class="heading">Event Date</td>
-                          <td class="value">${event.eventDateOut}</td>
+                          <td class="heading">Check Out</td>
+                          <td class="value">${event.CheckOut}</td>
                         </tr>
                         <tr>
-                          <td class="heading">Event Time</td>
-                          <td class="value">${event.adults}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Guest</td>
-                          <td class="value">${event.children}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Date Entered</td>
-                          <td class="value">${event.createdAt}</td>
+                          <td class="heading">Number Of Guests</td>
+                          <td class="value">${event.Guests}</td>
                         </tr>
                       </table>
                   </div>
@@ -196,7 +184,6 @@ exports.postSavePageEvent = (req, res, next) => {
 
 const nodemailer = require('nodemailer');
 const sendgridTransport = require('nodemailer-sendgrid-transport');
-const Event = require('../models/Event');
 const Contact = require('../models/Contact');
 
 
@@ -226,7 +213,7 @@ exports.postEmailEvent = (req, res, next) => {
     if (err) {
       console.log(err);
     } else if (event) {
-      const html = `
+        const html = `
                     <style>
                     table{
                         border-collapse: collapse;
@@ -243,28 +230,20 @@ exports.postEmailEvent = (req, res, next) => {
                     }
                     </style>
                     <div style="margin-top: 50px">
-                      <h1 style="margin-left: 70px;">Event</h1>
+                      <h1 style="margin-left: 70px;">Booking Information</h1>
                       <hr style=" margin-top:0px; height:10px;border:none;color:#333;background-color:#333; margin-left: 70px; margin-right: 73px;" />
                       <table border="1">
-                      <tr>
-                      <td class="heading">Event Name</td>
-                        <td class="value">${event.eventDateIn}</td>
-                      </tr>
-                      <tr>
-                        <td class="heading">Event Date</td>
-                        <td class="value">${event.eventDateOut}</td>
-                      </tr>
-                      <tr>
-                        <td class="heading">Event Time</td>
-                        <td class="value">${event.adults}</td>
-                      </tr>
-                      <tr>
-                        <td class="heading">Guest</td>
-                        <td class="value">${event.children}</td>
-                      </tr>
                         <tr>
-                          <td class="heading">Date Entered</td>
-                          <td class="value">${event.createdAt}</td>
+                          <td class="heading">Check In</td>
+                          <td class="value">${event.CheckIn}</td>
+                        </tr>
+                        <tr>
+                          <td class="heading">Check Out</td>
+                          <td class="value">${event.CheckOut}</td>
+                        </tr>
+                        <tr>
+                          <td class="heading">Number Of Guests</td>
+                          <td class="value">${event.Guests}</td>
                         </tr>
                       </table>
                   </div>
@@ -299,15 +278,6 @@ exports.postEmailEvent = (req, res, next) => {
     title: 'Send Email',
     id
   });
-  // transporter.sendMail({
-  //   to: 'ammarshabbir007@gmail.com',
-  //   from: 'MailRoomNS1',
-  //   subject: 'We Received Your Parcel',
-  //   html: 'Working',
-  //   files     : [{filename: 'Report.pdf', content: data}],
-  // });
-  // res.send(`Working${id}`);
-  // res.send(`Working${id}${name}${recipientEmail}${postMessage}`);
 };
 
 exports.postSendEmailPageContact = (req, res, next) => {
@@ -363,5 +333,4 @@ exports.postEmailPageEvent = (req, res, next) => {
     title: 'Email Page',
     page
   });
-  // res.send(`Working${page}${name}${recipientEmail}${postMessage}`);
 };

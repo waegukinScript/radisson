@@ -202,7 +202,7 @@ app.post('/event/delete-page/:page', eventController.postDeletePageEvent);
 app.post('/event/save-page/:page', eventController.postSavePageEvent);
 
 app.post('/event/send-email-page/:page', eventController.postSendEmailPageContact);
-app.post('/event/email-page/:page', eventController.postEmailPageEvent);
+// app.post('/event/email-page/:page', eventController.postEmailPageEvent);
 app.post('/event/send-email/:id', eventController.postSendEmailEvent);
 app.post('/event/email/:id', eventController.postEmailEvent);
 

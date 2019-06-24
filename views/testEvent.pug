@@ -18,31 +18,19 @@ html(lang='en')
        }
    body
      div(style='margin-top: 50px')
-       h1(style='margin-left: 70px;') Events
+       h1(style='margin-left: 70px;') Booking Information
        hr(style=' margin-top:0px; height:10px;border:none;color:#333;background-color:#333; margin-left: 70px; margin-right: 73px;')
        each event, index in eventsReceived
            p(style='margin-left: 70px;')= index+1
             table(border='1')
                 tbody
                     tr
-                        td.heading Event Name
-                        td.value= event.eventName
+                        td.heading Check In
+                        td.value= event.CheckIn
                     tr
-                        td.heading Event Date
-                        td.value= event.eventDate
+                        td.heading Check Out
+                        td.value= event.CheckOut
                     tr
-                        td.heading Event Time
-                        td.value= event.eventTime
-                    tr
-                        td.heading Guest
-                        td.value= event.guest
-                    tr
-                        td.heading Budget
-                        td.value= event.budget
-                    tr
-                        td.heading Contact Name
-                        td.value= event.contactName
-                    tr
-                        td.heading Email Address
-                        td.value= event.emailAddress
+                        td.heading Number Of Guests
+                        td.value= event.Guests
 

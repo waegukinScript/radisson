@@ -1,29 +1,26 @@
-extends layout
-
-block content
-
-  // ================ Start banner Area =================
-  section.banner-area.relative
-    .container
-      .row.height.align-items-center.justify-content-center
+include partials/header
+// ================ Start banner Area =================
+section.banner-area.relative
+.container(style='margin-top:150px;')
+    .row.height.align-items-center.justify-content-center
         .banner-content.col-lg-6
-          h1 Email Page
-          hr
-          .breadcrmb
-            p
-              a(href='index.html') Databases
-              span.lnr.lnr-arrow-right
-              a(href='about.html') From  ../models
-              a(href="/contactDatabase")
-                li Contact
-              a(href="/eventDatabase")
-                li Event
-              a(href="/userDatabase")
-                li User
+            h1 User Admin
+            hr
+            .breadcrmb
+                p
+                    a(href='index.html') Databases
+                    span.lnr.lnr-arrow-right
+                    a(href='about.html') From  ../models
+                    a(href='/contactDatabase')
+                        li Contact Database
+                    a(href="/eventDatabase")
+                        li Event Database
+                    a(href="/userDatabase")
+                        li User Database
 
-  div.row
-      div.col-lg-4.offset-lg-4
-          form.contact-form(action=`/event/email-page/${page}` method='POST')
+div.row.height.align-items-center.justify-content-center(style="margin-top:20px;")
+    div.col-lg-4
+        form.contact-form(action=`/contact/email-page/${page}` method='POST')
             .row
                 .col-lg-12.d-flex.flex-column.mb-20
                     input(type='hidden', name='_csrf', value=_csrf)
@@ -33,5 +30,7 @@ block content
                 .col-lg-12.d-flex.flex-column
                     textarea.form-control(name='postMessage' placeholder='Post a message' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Post a message'" required='')
                 .col-lg-12.d-flex.justify-content-end
-                    button.primary-btn.mt-30.text-uppercase Send Email
+                    button.main_btn.text-uppercase(type='submit' style="margin-top:10px;") Update Booking
                 .alert-msg
+
+include partials/footer

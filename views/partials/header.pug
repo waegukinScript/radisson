@@ -1,76 +1,74 @@
 doctype html
-html(lang='en')
-  head
+head
     // Required meta tags
     meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    link(rel='icon', href='img/favicon.png', type='image/png')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='icon' href='img/favicon.png' type='image/png')
     title Radisson Hotel
     // Bootstrap CSS
-    link(rel='stylesheet', href='css/bootstrap.css')
-    link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
-    link(rel='stylesheet', href='vendors/linericon/style.css')
-    link(rel='stylesheet', href='css/font-awesome.min.css')
-    link(rel='stylesheet', href='vendors/owl-carousel/owl.carousel.min.css')
-    link(rel='stylesheet', href='vendors/lightbox/simpleLightbox.css')
-    link(rel='stylesheet', href='vendors/nice-select/css/nice-select.css')
-    link(rel='stylesheet', href='vendors/animate-css/animate.css')
-    link(rel='stylesheet', href='vendors/popup/magnific-popup.css')
+    link(rel='stylesheet' href='/css/bootstrap.css')
+    link(rel='stylesheet' href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    link(rel='stylesheet' href='/vendors/linericon/style.css')
+    link(rel='stylesheet' href='/css/font-awesome.min.css')
+    link(rel='stylesheet' href='/vendors/owl-carousel/owl.carousel.min.css')
+    link(rel='stylesheet' href='/vendors/lightbox/simpleLightbox.css')
+    link(rel='stylesheet' href='/vendors/nice-select/css/nice-select.css')
+    link(rel='stylesheet' href='/vendors/animate-css/animate.css')
+    link(rel='stylesheet' href='/vendors/popup/magnific-popup.css')
     // main css
-    link(rel='stylesheet', href='css/style.css')
-    link(rel='stylesheet', href='css/responsive.css')
-  body
-    // ================Header Menu Area =================
-    header.header_area
-      .top_menu.row.m0
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel='stylesheet' href='/css/responsive.css')
+// ================Header Menu Area =================
+header.header_area
+    .top_menu.row.m0
         .container
-          .float-left
-            ul.list.header_social
-              li
-                a(href='#') Contact Us +44 (012) 5689 3264
-          .float-right
-            select
-              option(value='1') USD
-              option(value='1') EUR
-              option(value='1') AOA
-              option(value='1') AUD
-            select
-              option(value='1') ENG
-              option(value='1') FRA
-              option(value='1') BAN
-      .main_menu
+            .float-left
+                ul.list.header_social
+                    li
+                        a(href='#') Contact Us +44 (012) 5689 3264
+            .float-right
+                select
+                    option(value='1') USD
+                    option(value='1') EUR
+                    option(value='1') AOA
+                    option(value='1') AUD
+                select
+                    option(value='1') ENG
+                    option(value='1') FRA
+                    option(value='1') BAN
+    .main_menu
         nav.navbar.navbar-expand-lg.navbar-light
-          .container
-            // Brand and toggle get grouped for better mobile display
-            a.navbar-brand.logo_h(href='index.html')
-              img(src='img/logo.png', alt='')
-            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            // Collect the nav links, forms, and other content for toggling
-            #navbarSupportedContent.collapse.navbar-collapse.offset
-              ul.nav.navbar-nav.menu_nav.ml-auto
-                li.nav-item.active
-                  a.nav-link(href='/') Home
-                li.nav-item
-                  a.nav-link(href='/about') About
-                li.nav-item
-                  a.nav-link(href='/gallery') Gallery
-                li.nav-item.submenu.dropdown
-                  a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Pages
-                  ul.dropdown-menu
-                    li.nav-item
-                      a.nav-link(href='/elements') Elements
-                    li.nav-item
-                      a.nav-link(href='/rooms') Rooms
-                li.nav-item.submenu.dropdown
-                  a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Blog
-                  ul.dropdown-menu
-                    li.nav-item
-                      a.nav-link(href='/blog') Blog
-                    li.nav-item
-                      a.nav-link(href='/single-blog') Blog Details
-                li.nav-item
-                  a.nav-link(href='/contact') Contact
-    // ================Header Menu Area =================
+            .container
+                // Brand and toggle get grouped for better mobile display
+                a.navbar-brand.logo_h(href='index.html')
+                    img(src='img/logo.png' alt='')
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                // Collect the nav links, forms, and other content for toggling
+                #navbarSupportedContent.collapse.navbar-collapse.offset
+                    ul.nav.navbar-nav.menu_nav.ml-auto
+                        li.nav-item.active
+                            a.nav-link(href='index.html') Home
+                        li.nav-item
+                            a.nav-link(href='about-us.html') About
+                        li.nav-item
+                            a.nav-link(href='gallery.html') Gallery
+                        li.nav-item.submenu.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Pages
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='elements.html') Elements
+                                li.nav-item
+                                    a.nav-link(href='rooms.html') Rooms
+                        li.nav-item.submenu.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Blog
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='blog.html') Blog
+                                li.nav-item
+                                    a.nav-link(href='single-blog.html') Blog Details
+                        li.nav-item
+                            a.nav-link(href='contact.html') Contact
+// ================Header Menu Area =================
