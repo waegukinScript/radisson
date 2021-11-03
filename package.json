@@ -48,7 +48,7 @@
     "popper.js": "^1.14.7",
     "pug": "^2.0.3",
     "request": "^2.88.0",
-    "validator": "^10.11.0",
+    "validator": "^13.7.0",
     "html-pdf": "^2.2.0",
     "jade": "1.11.0",
     "nodemailer-sendgrid-transport": "^0.2.0"
